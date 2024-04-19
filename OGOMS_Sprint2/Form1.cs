@@ -3,5 +3,10 @@ namespace OGOMS_Sprint2 {
         public Form1() {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            //Testing
+            Console.WriteLine("Hello World");
+        }
     }
 }

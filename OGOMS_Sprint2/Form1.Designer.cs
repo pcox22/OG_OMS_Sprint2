@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             menuStrip1 = new MenuStrip();
+            button1 = new Button();
             SuspendLayout();
             // 
             // menuStrip1
@@ -34,11 +35,22 @@
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
+            // button1
+            // 
+            button1.Location = new Point(345, 244);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
@@ -50,5 +62,6 @@
         #endregion
 
         private MenuStrip menuStrip1;
+        private Button button1;
     }
 }
