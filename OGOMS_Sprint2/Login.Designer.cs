@@ -28,7 +28,10 @@
             lblPassword = new Label();
             tbxUserName = new TextBox();
             tbxPassword = new TextBox();
-            btnContinue = new Button();
+            btnLoginContinue = new Button();
+            lblName_Login = new Label();
+            pnlMenu_Login = new Panel();
+            pnlMenu_Login.SuspendLayout();
             SuspendLayout();
             // 
             // lblLogin
@@ -36,19 +39,18 @@
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point,  0);
             lblLogin.ForeColor = Color.FromArgb(  18,   47,   94);
-            lblLogin.Location = new Point(470, 71);
+            lblLogin.Location = new Point(423, 71);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(138, 59);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Login";
-            lblLogin.Click += label1_Click;
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
             lblUsername.ForeColor = Color.FromArgb(  18,   47,   94);
-            lblUsername.Location = new Point(417, 172);
+            lblUsername.Location = new Point(370, 172);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(110, 30);
             lblUsername.TabIndex = 1;
@@ -59,7 +61,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
             lblPassword.ForeColor = Color.FromArgb(  18,   47,   94);
-            lblPassword.Location = new Point(417, 251);
+            lblPassword.Location = new Point(370, 251);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(105, 30);
             lblPassword.TabIndex = 2;
@@ -68,7 +70,7 @@
             // tbxUserName
             // 
             tbxUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point,  0);
-            tbxUserName.Location = new Point(417, 205);
+            tbxUserName.Location = new Point(370, 205);
             tbxUserName.MaxLength = 24;
             tbxUserName.Name = "tbxUserName";
             tbxUserName.Size = new Size(245, 29);
@@ -77,39 +79,67 @@
             // tbxPassword
             // 
             tbxPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point,  0);
-            tbxPassword.Location = new Point(417, 284);
+            tbxPassword.Location = new Point(370, 284);
             tbxPassword.MaxLength = 24;
             tbxPassword.Name = "tbxPassword";
             tbxPassword.Size = new Size(245, 29);
             tbxPassword.TabIndex = 4;
             tbxPassword.UseSystemPasswordChar = true;
             // 
-            // btnContinue
+            // btnLoginContinue
             // 
-            btnContinue.BackColor = Color.FromArgb(  61,   128,   186);
-            btnContinue.Font = new Font("Segoe UI", 9F,  FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point,  0);
-            btnContinue.ForeColor = Color.White;
-            btnContinue.Location = new Point(496, 344);
-            btnContinue.Name = "btnContinue";
-            btnContinue.Size = new Size(86, 31);
-            btnContinue.TabIndex = 5;
-            btnContinue.Text = "Continue";
-            btnContinue.UseVisualStyleBackColor = false;
+            btnLoginContinue.BackColor = Color.FromArgb(  61,   128,   186);
+            btnLoginContinue.Font = new Font("Segoe UI", 9F,  FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point,  0);
+            btnLoginContinue.ForeColor = Color.White;
+            btnLoginContinue.Location = new Point(449, 344);
+            btnLoginContinue.Name = "btnLoginContinue";
+            btnLoginContinue.Size = new Size(86, 31);
+            btnLoginContinue.TabIndex = 5;
+            btnLoginContinue.Text = "Continue";
+            btnLoginContinue.UseVisualStyleBackColor = false;
+            btnLoginContinue.Click += btnLoginContinue_Click;
+            // 
+            // lblName_Login
+            // 
+            lblName_Login.AutoSize = true;
+            lblName_Login.Dock = DockStyle.Left;
+            lblName_Login.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            lblName_Login.ForeColor = Color.White;
+            lblName_Login.Location = new Point(0, 0);
+            lblName_Login.Name = "lblName_Login";
+            lblName_Login.Padding = new Padding(0, 5, 0, 0);
+            lblName_Login.Size = new Size(223, 37);
+            lblName_Login.TabIndex = 4;
+            lblName_Login.Text = "Acme Distributing";
+            // 
+            // pnlMenu_Login
+            // 
+            pnlMenu_Login.BackColor = Color.FromArgb(  47,   85,   151);
+            pnlMenu_Login.Controls.Add(lblName_Login);
+            pnlMenu_Login.Dock = DockStyle.Top;
+            pnlMenu_Login.Location = new Point(0, 0);
+            pnlMenu_Login.Name = "pnlMenu_Login";
+            pnlMenu_Login.Size = new Size(984, 44);
+            pnlMenu_Login.TabIndex = 11;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(  222,   235,   247);
-            ClientSize = new Size(1078, 589);
-            Controls.Add(btnContinue);
+            ClientSize = new Size(984, 561);
+            Controls.Add(pnlMenu_Login);
+            Controls.Add(btnLoginContinue);
             Controls.Add(tbxPassword);
             Controls.Add(tbxUserName);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
             Controls.Add(lblLogin);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "OG OMS - Prototype, Sprint 2";
+            pnlMenu_Login.ResumeLayout(false);
+            pnlMenu_Login.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,6 +151,8 @@
         private Label lblPassword;
         private TextBox tbxUserName;
         private TextBox tbxPassword;
-        private Button btnContinue;
+        private Button btnLoginContinue;
+        private Label lblName_Login;
+        private Panel pnlMenu_Login;
     }
 }

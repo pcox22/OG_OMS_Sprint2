@@ -4,12 +4,11 @@
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e) {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e) {
-
+        private void btnLoginContinue_Click(object sender, EventArgs e) {
+            Hide();
+            _2FA _2fa = new _2FA();
+            _2fa.ShowDialog();
+            Close();
         }
     }
 }
